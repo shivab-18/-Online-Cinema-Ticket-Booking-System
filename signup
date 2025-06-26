@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Booking - Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4e54c8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-group button:hover {
+            background-color: #3b41b5;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .form-footer a {
+            color: #4e54c8;
+            text-decoration: none;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .social-button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .google-button {
+            background-color: #db4437;
+        }
+
+        .google-button:hover {
+            background-color: #c33d2f;
+        }
+
+        .facebook-button {
+            background-color: #4267B2;
+        }
+
+        .facebook-button:hover {
+            background-color: #365899;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up for Cinema Booking</h2>
+        <div class="social-buttons">
+            <button class="social-button google-button" onclick="googleSignup()">Sign up with Google</button>
+            <button class="social-button facebook-button" onclick="facebookSignup()">Sign up with Facebook</button>
+        </div>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <div class="error" id="usernameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <div class="error" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <div class="error" id="passwordError"></div>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                <div class="error" id="confirmPasswordError"></div>
+            </div>
+            <div class="form-group">
+                <button type="submit">Sign Up</button>
+            </div>
+            <div class="form-footer">
+                <p>Already have an account? <a href="login.html">Log in</a></p>
+            </div>
+        </form>
+    </div>
+    </script>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const confirmPassword = document.getElementById('confirmPassword').value.trim();
+
+    const usernameError = document.getElementById('usernameError');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+    const confirmPasswordError = document.getElementById('confirmPasswordError');
+
+    usernameError.textContent = '';
+    emailError.textContent = '';
+    passwordError.textContent = '';
+    confirmPasswordError.textContent = '';
+
+    let valid = true;
+
+    if (username === '') {
+        usernameError.textContent = 'Username is required.';
+        valid = false;
+    }
+
+    if (email === '') {
+        emailError.textContent = 'Email is required.';
+        valid = false;
+    } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+        emailError.textContent = 'Please enter a valid email address.';
+        valid = false;
+    }
+
+    if (password === '') {
+        passwordError.textContent = 'Password is required.';
+        valid = false;
+    } else if (password.length < 6) {
+        passwordError.textContent = 'Password must be at least 6 characters long.';
+        valid = false;
+    }
+
+    if (confirmPassword === '') {
+        confirmPasswordError.textContent = 'Please confirm your password.';
+        valid = false;
+    } else if (password !== confirmPassword) {
+        confirmPasswordError.textContent = 'Passwords do not match.';
+        valid = false;
+    }
+
+    if (valid) {
+        // Store user data in sessionStorage
+        sessionStorage.setItem('username', username);
+
+        alert('Signup successful! Redirecting to the home page...');
+        window.location.href = 'file:///D:/project%20web/bb.html';  // Replace 'home.html' with your home page file name
+    }
+});
+
+    </script>
+</body>
+</html>
