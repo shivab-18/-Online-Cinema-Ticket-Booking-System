@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Booking - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .logout-button {
+            padding: 10px 20px;
+            background-color: #4e54c8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .logout-button:hover {
+            background-color: #3b41b5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, <span id="usernameDisplay"></span>!</h1>
+        <button class="logout-button" onclick="logout()">Log Out</button>
+    </div>
+
+    <script>
+        // Display username on the home page
+        const username = sessionStorage.getItem('username');
+        if (username) {
+            document.getElementById('usernameDisplay').textContent = username;
+        } else {
+            alert('You are not logged in!');
+            window.location.href = 'signup.html';
+        }
+
+        // Logout function
+        function logout() {
+            sessionStorage.removeItem('username');
+            window.location.href = 'signup.html';
+        }
+    </script>
+</body>
+</html>
