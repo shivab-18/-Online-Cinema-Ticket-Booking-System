@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="movies-container">
+        <div class="movie">
+            <img src="d:\image\Devara_1687223267.webp" alt="Movie 1" class="movie-poster">
+            <h2 class="movie-title">DEVARA</h2>
+            <div class="movie-rating">⭐ 8.5/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\fast.jpg" alt="Movie 2" class="movie-poster">
+            <h2 class="movie-title">FAST AND FURIOUS</h2>
+            <div class="movie-rating">⭐ 9.2/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\stree23.jpg" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">STREE-2</h2>
+            <div class="movie-rating">⭐ 9.0/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\venom31.webp" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">VENOM</h2>
+            <div class="movie-rating">⭐ 9.0/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\54b3d8175856147.64ba8d9dc4b24.jpg" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">Kalki-2898-AD</h2>
+            <div class="movie-rating">⭐ 9.0/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\salaar-movie-poster.webp" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">SALAAR</h2>
+            <div class="movie-rating">⭐ 7.5/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\Vettaiyan-.jpg" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">VETTAIYAN</h2>
+            <div class="movie-rating">⭐ 7.0/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\Animal_.webp" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">ANIMAL</h2>
+            <div class="movie-rating">⭐ 8.0/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\RRR.jpg" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">RRR</h2>
+            <div class="movie-rating">⭐ 9.0/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\KGF Chapter 2.jpg" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">KGF-2</h2>
+            <div class="movie-rating">⭐ 9.2/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\Leo" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">LEO</h2>
+            <div class="movie-rating">⭐ 9.0/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\baa.jpg" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">BAHUBALI-2</h2>
+            <div class="movie-rating">⭐ 9.0/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\bhara.jpg" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">BRAHMASTRA</h2>
+            <div class="movie-rating">⭐ 9.0/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\123.jpg" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">SINGHAM123</h2>
+            <div class="movie-rating">⭐ 6.0/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\MAN.jpg" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">BUSINESSMAN</h2>
+            <div class="movie-rating">⭐ 10.0/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\ROCKET.jpg" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">ROCKET DRIVER</h2>
+            <div class="movie-rating">⭐ 9.5/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\MARTIN.jpeg" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">MARTIN</h2>
+            <div class="movie-rating">⭐ 6.0/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\WILD.jpg" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">THE WILD ROBOT</h2>
+            <div class="movie-rating">⭐ 7.0/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\JIGRA.webp" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">JIGRA</h2>
+            <div class="movie-rating">⭐ 9.0/10</div>
+        </div>
+        <div class="movie">
+            <img src="D:\image\SPIDER.jpg" alt="Movie 3" class="movie-poster">
+            <h2 class="movie-title">SPIDER MAN FAR FROM HOME</h2>
+            <div class="movie-rating">⭐ 9.0/10</div>
+        </div>
+    </div>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    .movies-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .movie {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        max-width: 200px;
+        text-align: center;
+    }
+    
+    .movie-poster {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .movie-title {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    
+    .movie-rating {
+        font-size: 16px;
+        color: #333;
+    }
+</style>
+</body>
+</html>
