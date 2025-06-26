@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Offers & Memberships</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #68eb34;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .offers-container, .membership-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .offer-card, .membership-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .offer-card img, .membership-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .offer-title, .membership-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .offer-description, .membership-description {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .offer-price, .membership-price {
+            font-size: 1.1rem;
+            color: #e53935;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .offer-card a, .membership-card a {
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .offer-card a:hover, .membership-card a:hover {
+            background-color: #388e3c;
+        }
+
+        .highlight {
+            background-color: #ffeb3b;
+            border-radius: 5px;
+            padding: 5px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cinema Offers & Memberships</h1>
+
+    <!-- Offers Section -->
+    <section class="offers-section">
+        <h2>Current Offers</h2>
+        <div class="offers-container">
+            <div class="offer-card">
+                <img src="D:\image\maxresdefault.jpg" alt="Offer 1">
+                <h3 class="offer-title">Buy 1 Get 1 Free</h3>
+                <p class="offer-description">Purchase a ticket and get another ticket absolutely free! Limited time offer.</p>
+                <p class="offer-price">Only Today!</p>
+                <a href="file:///D:/project%20web/1%20and%202.html" target="_blank">Claim Offer</a>
+            </div>
+            <div class="offer-card">
+                <img src="d:\image\popcorn" alt="Offer 2">
+                <h3 class="offer-title">20% Off on Popcorn</h3>
+                <p class="offer-description">Get 20% off on all popcorn combos with any ticket purchase.</p>
+                <p class="offer-price">Valid Until: Oct 31, 2024</p>
+                <a href="file:///D:/project%20web/popcorn.html" target="_blank">Get Offer</a>
+            </div>
+            <div class="offer-card">
+                <img src="D:\image\student" alt="Offer 3">
+                <h3 class="offer-title">Student Discount</h3>
+                <p class="offer-description">Show your student ID at the counter and enjoy 15% off on all tickets.</p>
+                <p class="offer-price">Every Wednesday</p>
+                <a href="file:///D:/project%20web/student.html" target="_blank">Use Discount</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section class="membership-section">
+        <h2>Exclusive Membership Plans</h2>
+        <div class="membership-container">
+            <div class="membership-card">
+                <img src="D:\image\-silver" alt="Silver Membership">
+                <h3 class="membership-title">Silver Membership</h3>
+                <p class="membership-description">Get 5% off on all tickets, early access to new releases, and exclusive member-only events.</p>
+                <p class="membership-price">$10/month</p>
+                <a href="file:///D:/project%20web/silver.html" target="_blank">Join Now</a>
+            </div>
+            <div class="membership-card">
+                <img src="D:\image\gold" alt="Gold Membership">
+                <h3 class="membership-title highlight">Gold Membership</h3>
+                <p class="membership-description">Enjoy 10% off on tickets, free upgrades on popcorn, and priority seat reservations.</p>
+                <p class="membership-price">$20/month</p>
+                <a href="file:///D:/project%20web/gold.html" target="_blank">Join Now</a>
+            </div>
+            <div class="membership-card">
+                <img src="D:\image\-Platinum-" alt="Platinum Membership">
+                <h3 class="membership-title">Platinum Membership</h3>
+                <p class="membership-description">Unlimited tickets, free snacks on every visit, and VIP lounge access for ultimate comfort.</p>
+                <p class="membership-price">$50/month</p>
+                <a href="file:///D:/project%20web/platiunm.html" target="_blank">Join Now</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
