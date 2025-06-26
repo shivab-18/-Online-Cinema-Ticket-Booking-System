@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Showtimes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .showtimes-table {
+            width: 300%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .showtimes-table th, .showtimes-table td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .showtimes-table th {
+            background-color: #4caf50;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .showtimes-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .showtimes-table tr:hover {
+            background-color: #e0e0e0;
+        }
+
+        .showtimes-table td {
+            border: 1px solid #ddd;
+        }
+
+        .showtimes-table .day-header {
+            background-color: #ff9800;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .time-slot {
+            background-color: #e8f5e9;
+            color: #333;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 0.9rem;
+        }
+
+        .time-slot:hover {
+            background-color: #c8e6c9;
+        }
+
+        .highlight {
+            background-color: #ffeb3b;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weekly Cinema Showtimes</h1>
+    <table class="showtimes-table">
+        <tr>
+            <th>Day</th>
+            <th>4:00 AM</th>
+            <th>9:00 AM</th>
+            <th>12:00 PM</th>
+            <th>3:00 PM</th>
+            <th>6:00 PM</th>
+            <th>9:00 PM</th>
+        </tr>
+        <tr>
+            <td class="day-header">Monday</td>
+            <td class="time-slot">DEVARA</td>
+            <td class="time-slot">FAST-X</td>
+            <td class="time-slot highlight">VENOM-3</td>
+            <td class="time-slot">Kalki-2898-AD</td>
+            <td class="time-slot">STREE-2</td>
+            <td class="time-slot">VETTAIYAN</td>
+        </tr>
+        <tr>
+            <td class="day-header">Tuesday</td>
+            <td class="time-slot">FAST-X</td>
+            <td class="time-slot highlight">Kalki-2898-AD</td>
+            <td class="time-slot">VENOM-3</td>
+            <td class="time-slot">STREE-2</td>
+            <td class="time-slot">DEVARA</td>
+            <td class="time-slot">VETTAIYAN</td>
+        </tr>
+        <tr>
+            <td class="day-header">Wednesday</td>
+            <td class="time-slot">VETTAIYAN</td>
+            <td class="time-slot">DEVARA</td>
+            <td class="time-slot">STREE-2</td>
+            <td class="time-slot highlight">FAST-X</td>
+            <td class="time-slot">VENOM-3</td>
+            <td class="time-slot">Kalki-2898-AD</td>
+        </tr>
+        <tr>
+            <td class="day-header">Thursday</td>
+            <td class="time-slot highlight">FAST-X</td>
+            <td class="time-slot">DEVARA</td>
+            <td class="time-slot">VETTAIYAN</td>
+            <td class="time-slot">STREE-2</td>
+            <td class="time-slot">VENOM-3</td>
+            <td class="time-slot">Kalki-2898-AD</td>
+        </tr>
+        <tr>
+            <td class="day-header">Friday</td>
+            <td class="time-slot">Kalki-2898-AD</td>
+            <td class="time-slot">STREE-2</td>
+            <td class="time-slot highlight">VETTAIYAN</td>
+            <td class="time-slot">DEVARA</td>
+            <td class="time-slot">VENOM-3</td>
+            <td class="time-slot">FAST-X</td>
+        </tr>
+        <tr>
+            <td class="day-header">Saturday</td>
+            <td class="time-slot">DEVARA</td>
+            <td class="time-slot">Kalki-2898-AD</td>
+            <td class="time-slot highlight">STREE-2</td>
+            <td class="time-slot">FAST-X</td>
+            <td class="time-slot">VETTAIYAN</td>
+            <td class="time-slot">VENOM-3</td>
+        </tr>
+        <tr>
+            <td class="day-header">Sunday</td>
+            <td class="time-slot">VENOM-3</td>
+            <td class="time-slot highlight">VETTAIYAN</td>
+            <td class="time-slot">DEVARA</td>
+            <td class="time-slot">Kalki-2898-AD</td>
+            <td class="time-slot">FAST-X</td>
+            <td class="time-slot">STREE-2</td>
+        </tr>
+    </table>
+</body>
+</html>
