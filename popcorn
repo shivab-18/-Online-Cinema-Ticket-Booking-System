@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Promotion Banner</title>
+</head>
+<body>
+    <div class="banner">
+        <h1>Get 20% Off on Popcorn!</h1>
+        <p>Get 20% off on all popcorn combos with any ticket purchase.</p>
+        <p class="valid-until">Valid Until: Oct 31, 2024</p>
+        <a href="link-to-claim-offer-1" target="_blank" class="claim-button">Get Offer</a>
+        
+        <form class="promo-form">
+            <input type="text" placeholder="Enter Your Name" required>
+            <input type="text" placeholder="Enter Your Code" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .banner {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: 50px auto;
+        }
+
+        .banner h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .banner p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .valid-until {
+            font-weight: bold;
+            color: #e60000;
+            font-size: 20px;
+        }
+
+        .claim-button {
+            display: inline-block;
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .claim-button:hover {
+            background-color: #218838;
+        }
+
+        .promo-form {
+            margin-top: 20px;
+        }
+
+        .promo-form input {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: calc(100% - 22px); /* Full width minus padding */
+        }
+
+        .promo-form button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .promo-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</body>
+</html>
