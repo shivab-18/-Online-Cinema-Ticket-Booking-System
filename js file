@@ -1,0 +1,75 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const seats = document.querySelectorAll('.row .seat:not(.occupied)');
+    const selectedSeatsElement = document.getElementById('selected-seats');
+    const totalPriceElement = document.getElementById('total-price');
+    const movieSelect = document.getElementById('movie');
+    const theaterSelect = document.getElementById('theater');
+    const locationSelect = document.getElementById('location');
+    const bookButton = document.getElementById('book-button');
+
+    let ticketPrice = +movieSelect.value;
+
+    function updateSelectedCount() {
+        const selectedSeats = document.querySelectorAll('.row .seat.selected');
+        const selectedSeatsCount = selectedSeats.length;
+        const selectedSeatNumbers = Array.from(selectedSeats).map(seat => seat.getAttribute('data-seat-number'));
+
+        selectedSeatsElement.innerText = selectedSeatNumbers.join(', ') || '0';
+        totalPriceElement.innerText = selectedSeatsCount * ticketPrice;
+    }
+
+    seats.forEach(seat => {
+        seat.addEventListener('click', () => {
+            seat.classList.toggle('selected');
+            updateSelectedCount();
+        });
+    });
+
+    movieSelect.addEventListener('change', e => {
+        ticketPrice = +e.target.value;
+        updateSelectedCount();
+    });
+
+    function generateReceipt() {
+        const movie = movieSelect.options[movieSelect.selectedIndex].text.split(' - ')[0];
+        const showtime = document.getElementById('showtime').options[document.getElementById('showtime').selectedIndex].text;
+        const theater = theaterSelect.options[theaterSelect.selectedIndex].text;
+        const location = locationSelect.options[locationSelect.selectedIndex].text;
+        const selectedSeats = selectedSeatsElement.innerText;
+        const totalPrice = totalPriceElement.innerText;
+
+        const receiptContent = `
+            Movie Ticket Receipt
+            ---------------------
+            Movie: ${movie}
+            Theater: ${theater}
+            Location: ${location}
+            Showtime: ${showtime}
+            Selected Seats: ${selectedSeats}
+            Total Price: $${totalPrice}
+            ---------------------
+            Thank you for your purchase!
+        `;
+
+        // Create a Blob with the receipt content
+        const blob = new Blob([receiptContent], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'ticket_receipt.txt';
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+
+    bookButton.addEventListener('click', () => {
+        if (selectedSeatsElement.innerText === '0') {
+            alert('Please select at least one seat before booking.');
+        } else {
+            generateReceipt();
+            alert('Your receipt is being downloaded.');
+        }
+    });
+
+    updateSelectedCount();
+}
+);
